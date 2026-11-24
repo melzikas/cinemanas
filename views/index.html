@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/img/estrela.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/tema-inicial.js"></script>
+  <title>Catálogo | CineManas</title>
+</head>
+<body>
+  <div class="app">
+    <aside class="lateral">
+      <a class="caixa-logo" href="/" aria-label="CineManas - início">
+        <img class="logo" src="/img/logo.png" alt="CineManas" />
+      </a>
+      <a class="link-lateral" href="/configuracoes">
+        <span class="avatar" id="avatar"></span>
+        <span id="nome-perfil">Perfil</span>
+      </a>
+      <a class="link-lateral" href="/configuracoes">Configurações</a>
+
+      <nav class="caixa-categorias" aria-label="Categorias">
+        <h2>Categorias</h2>
+        <ul id="lista-categorias"></ul>
+      </nav>
+
+      <a class="link-lateral favoritos-link" id="link-favoritos" href="/?aba=favoritos">
+        <img class="estrela" src="/img/estrela.png" alt="" /> Favoritos
+      </a>
+    </aside>
+
+    <header class="topo">
+      <nav class="abas" id="abas" aria-label="Seções">
+        <a href="/?aba=geral" data-aba="geral">Geral</a>
+        <a href="/?aba=filmes" data-aba="filmes">Filmes</a>
+        <a href="/?aba=series" data-aba="series">Séries</a>
+        <a href="/?aba=assistidos" data-aba="assistidos">Assistidos</a>
+      </nav>
+      <label class="busca">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="busca" placeholder="Pesquisa" aria-label="Pesquisar títulos" />
+      </label>
+      <img class="arabesco" src="/img/arabesco.png" alt="" />
+    </header>
+
+    <main class="conteudo zebra">
+      <h1 class="pilula" id="titulo-secao">Títulos</h1>
+      <div class="grade" id="grade"></div>
+      <p class="vazio oculto" id="vazio"></p>
+    </main>
+  </div>
+  <script src="/js/comum.js"></script>
+  <script src="/js/catalogo.js"></script>
+</body>
+</html>

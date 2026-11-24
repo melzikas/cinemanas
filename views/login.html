@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/img/estrela.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/tema-inicial.js"></script>
+  <title>Entrar | CineManas</title>
+</head>
+<body class="zebra">
+  <main class="pagina-central">
+    <section class="coluna">
+      <div class="avatar grande" aria-hidden="true"></div>
+      <form id="form-login" class="formulario" novalidate>
+        <label for="email">E-mail</label>
+        <input class="campo" type="email" id="email" name="email" placeholder="Ex: princesadoOneDirection@gmail.com" autocomplete="email" required />
+        <label for="senha">Senha</label>
+        <input class="campo" type="password" id="senha" name="senha" placeholder="Ex: HarryStyles123" autocomplete="current-password" required />
+        <button class="botao-acessar" type="submit">Acessar</button>
+        <p class="mensagem" id="mensagem" role="alert"></p>
+        <p class="link-rodape">Ainda não tem conta? <a href="/cadastro">Criar conta</a></p>
+      </form>
+    </section>
+  </main>
+  <script src="/js/comum.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

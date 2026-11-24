@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/img/estrela.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/tema-inicial.js"></script>
+  <title>Título | CineManas</title>
+</head>
+<body>
+  <main class="pagina-titulo">
+    <section class="faixa-destaque">
+      <a class="voltar" href="/">&larr; Voltar ao catálogo</a>
+      <div class="destaque-grade oculto" id="detalhe">
+        <div class="moldura-poster"><img id="poster" src="" alt="" /></div>
+        <div>
+          <h1 class="titulo-nome"><span id="nome"></span><img id="estrela-fav" src="/img/estrela.png" alt="" class="apagada" /></h1>
+          <p class="sinopse"><strong>Sinopse:</strong> <span id="sinopse"></span></p>
+          <p class="info-extra" id="info-extra"></p>
+          <div class="etiquetas" id="etiquetas"></div>
+          <div class="botoes-titulo">
+            <a class="botao-grande" id="botao-assistir" href="#">Assistir</a>
+            <button class="botao-grande" id="botao-favorito" type="button" aria-pressed="false">Favoritos</button>
+          </div>
+        </div>
+      </div>
+      <p class="sinopse" id="mensagem"></p>
+    </section>
+    <section class="elenco oculto" id="bloco-elenco">
+      <strong>ELENCO:</strong> <span id="elenco"></span>
+    </section>
+  </main>
+  <script src="/js/comum.js"></script>
+  <script src="/js/titulo.js"></script>
+</body>
+</html>

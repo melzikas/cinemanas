@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/img/estrela.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/tema-inicial.js"></script>
+  <title>Configurações | CineManas</title>
+</head>
+<body class="zebra">
+  <main class="pagina-central">
+    <section class="coluna">
+      <div class="avatar grande" id="avatar" role="img" aria-label="Foto de perfil"></div>
+      <p class="link-rodape" id="saudacao"></p>
+
+      <div class="painel-config">
+        <h1>Configurações</h1>
+        <div class="miolo">
+
+          <div class="item-config">
+            <button type="button" data-abre="corpo-foto"><img src="/img/estrela-zebra.png" alt="" />Trocar Foto de Perfil</button>
+            <form class="corpo oculto" id="corpo-foto">
+              <input class="campo" type="file" id="arquivo-foto" accept="image/png,image/jpeg,image/webp,image/gif" />
+              <button class="botao-pequeno" type="submit">Salvar foto</button><span id="aviso-foto"></span>
+            </form>
+          </div>
+
+          <div class="item-config">
+            <button type="button" data-abre="corpo-bloqueio"><img src="/img/estrela-zebra.png" alt="" />Bloquear Conteúdo</button>
+            <form class="corpo oculto" id="corpo-bloqueio">
+              <p style="margin-bottom:10px">Marque as categorias que você não quer ver no catálogo:</p>
+              <div class="lista-checks" id="lista-bloqueios"></div>
+              <button class="botao-pequeno" type="submit">Salvar bloqueios</button><span id="aviso-bloqueio"></span>
+            </form>
+          </div>
+
+          <div class="item-config">
+            <button type="button" data-abre="corpo-credenciais"><img src="/img/estrela-zebra.png" alt="" />Email e Senha</button>
+            <form class="corpo oculto" id="corpo-credenciais" novalidate>
+              <label for="novo-email">E-mail</label>
+              <input class="campo" type="email" id="novo-email" autocomplete="email" required />
+              <label for="nova-senha">Nova senha (deixe vazio para não trocar)</label>
+              <input class="campo" type="password" id="nova-senha" autocomplete="new-password" />
+              <label for="senha-atual">Senha atual</label>
+              <input class="campo" type="password" id="senha-atual" autocomplete="current-password" required />
+              <button class="botao-pequeno" type="submit">Salvar</button><span id="aviso-credenciais"></span>
+            </form>
+          </div>
+
+          <div class="item-config">
+            <button type="button" data-abre="corpo-tema"><img src="/img/estrela-zebra.png" alt="" />Modo Escuro</button>
+            <div class="corpo oculto" id="corpo-tema">
+              <label class="chave"><input type="checkbox" id="chave-tema" /> <span id="texto-tema">Desligado</span></label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="acoes-config">
+        <a class="botao-contorno" href="/">&larr; Voltar ao catálogo</a>
+        <button class="botao-contorno" id="sair" type="button">Sair da conta</button>
+      </div>
+    </section>
+  </main>
+  <script src="/js/comum.js"></script>
+  <script src="/js/configuracoes.js"></script>
+</body>
+</html>
