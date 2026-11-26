@@ -77,7 +77,7 @@ async function carregarTitulos() {
     .map(
       (t) => `
       <a class="cartao" href="/titulo?id=${t.id}">
-        <div class="poster"><img src="${escaparHTML(t.poster)}" alt="Pôster de ${escaparHTML(t.nome)}" loading="lazy" /></div>
+        <div class="poster"><img src="${escaparHTML(t.poster)}" referrerpolicy="no-referrer" alt="Pôster de ${escaparHTML(t.nome)}" loading="lazy" /></div>
         <span>${escaparHTML(t.nome)} | ${t.ano}</span>
       </a>`
     )

@@ -17,6 +17,7 @@ async function iniciar() {
     const t = await api('/api/titulos/' + encodeURIComponent(id));
 
     document.title = `${t.nome} (${t.ano}) | CineManas`;
+    document.getElementById('poster').referrerPolicy = 'no-referrer';
     document.getElementById('poster').src = t.poster;
     document.getElementById('poster').alt = `Pôster de ${t.nome}`;
     document.getElementById('nome').textContent = `${t.nome.toUpperCase()} (${t.ano})`;

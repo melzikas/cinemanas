@@ -77,10 +77,19 @@ function acharArquivo(pasta, nome, extensoes) {
   return parcial ? parcial.f : null;
 }
 
-// Pôster: public/img/posters/<nome-do-titulo>.jpg (ou logo, se não existir)
+// Pôsteres que vêm de um link da internet: src/util/posters-externos.json
+// (formato: "slug-do-titulo": "https://...jpg"). Lido uma vez ao ligar o servidor.
+let POSTERS_EXTERNOS = {};
+try {
+  POSTERS_EXTERNOS = JSON.parse(fs.readFileSync(path.join(__dirname, 'posters-externos.json'), 'utf8'));
+} catch (_) { /* sem o arquivo, só vale a pasta de pôsteres */ }
+
+// Pôster, nesta ordem: 1) public/img/posters/<nome-do-titulo>.jpg
+// 2) link em posters-externos.json  3) logo do site
 function posterDe(nome) {
   const arquivo = acharArquivo(PASTA_POSTERS, nome, ['.jpg', '.jpeg', '.png', '.webp']);
-  return arquivo ? `/img/posters/${arquivo}` : '/img/logo.png';
+  if (arquivo) return `/img/posters/${arquivo}`;
+  return POSTERS_EXTERNOS[slugify(nome)] || '/img/logo.png';
 }
 
 // Vídeo: videos/<nome-do-titulo>.mp4 (ou exemplo.mp4, se não existir)

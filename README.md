@@ -69,7 +69,10 @@ O banco se chama `cinemanaas` e tem estas tabelas:
 
 **O que não está no banco:** o modelo não tem colunas para foto de perfil, tema (claro/escuro) e categorias bloqueadas. Isso fica em `data/preferencias.json`, por id de usuária. Se você recriar o banco, apague esse arquivo para não sobrar dado de usuárias antigas.
 
-**Pôster e vídeo** também não são colunas: o servidor procura `public/img/posters/<nome-do-titulo>.jpg` e `videos/<nome-do-titulo>.mp4` (ex.: `outlander.mp4`). Se não achar, usa o logo e o `videos/exemplo.mp4`.
+**Pôster e vídeo** também não são colunas: o servidor procura `public/img/posters/<nome-do-titulo>.jpg` e `videos/<nome-do-titulo>.mp4` (ex.: `outlander.mp4`). Se não achar o pôster, procura um link em `src/util/posters-externos.json` (`"slug-do-titulo": "https://..."`) e, por último, usa o logo. Sem o vídeo, usa o `videos/exemplo.mp4`.
+Arquivo na pasta `posters/` sempre vence o link, então dá para trocar um link por um arquivo salvo quando quiser (baixe a imagem e salve com o nome do título, ex.: `ponyo.jpg`).
+
+**Novos títulos:** depois do `seed.sql`, rode também `database/novos-titulos.sql` (uma vez só). Ele adiciona filmes, séries, categorias e elenco sem usar ids fixos.
 
 **Ids na API:** como filmes e séries são tabelas separadas, o id de um título é `f1` (filme 1) ou `s3` (série 3).
 
